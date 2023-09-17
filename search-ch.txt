@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<string.h>
+char search(char str[],char key,int l);
+int main()
+{
+    char str[20]="my name is pooja";
+    int key;
+    int l=strlen(str);
+    printf("enter a character\n");
+    scanf("%c",&key);
+    int pos=search(str,key,l);
+    if(pos==0)
+    {
+        printf("character not found\n");
+    }
+    else
+    {
+        printf("character found in pos=%d\n",pos);
+    }
+
+}
+char search(char str[],char key,int l)
+{
+    int i;
+    for(i=0;i<l;i++)
+    {
+        if(str[i]==key)
+        {
+            
+            return i+1;
+        }
+    }
+    
+    return 0;
+}
