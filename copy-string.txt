@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+char str1[10],str2[10],i=0;
+int *ptr1,*ptr2;
+ptr1=str1;
+ptr2=str2;
+printf("enter a string\n");
+scanf("%s",ptr1);
+strcpy(ptr2,ptr1);
+printf("%s",ptr2);
+}
